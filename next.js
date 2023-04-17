@@ -56,3 +56,19 @@ function toggleActive(){
     })
 }
 toggleActive()
+//navigation behavior on scroll
+function visible(){
+    var previousScroll = window.scrollY;//0
+    let header=document.querySelector(".header")
+    window.addEventListener("scroll",()=>{
+    let currentScroll = window.scrollY;
+      if (previousScroll > currentScroll) {// 13>0
+        header.style.top = "0px";
+        header.style.position="fixed"
+      } else {
+        header.style.top = "-100px";
+      }
+      previousScroll = currentScroll;//previousScroll=0, currentScroll=
+    })
+    }
+    visible()
