@@ -72,7 +72,15 @@ function createForm(){
         })
         
 }
-
+function toggleActive(){
+    let filter=document.querySelector(".filter-items")
+    let show=document.querySelector(".toShow")
+    filter.addEventListener("click",()=>{
+        show.classList.toggle("active")
+        show.classList.toggle("transis")
+    })
+}
+toggleActive()
  //navigation behavior on scroll
  function visible(){
     var previousScroll = window.scrollY;//0
