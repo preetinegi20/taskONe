@@ -1,3 +1,6 @@
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,200&display=swap');
 *{
     padding: 0;
@@ -68,10 +71,11 @@ section.main_header .main-container{
     position: relative;
 }
 section.main_header .header{
-  z-index: 888;
+   z-index: 888;
     width: 100%;
     background-color: #FFFFFF;
     position: fixed;
+    transition: .5s ease;
 }
 section.main_header .header .container{
     width: 90%;
@@ -108,24 +112,40 @@ section.main_header .main-container .header .container .logo p .atg{
     color:#27A365;
 }
 section.main_header  .main-container  .header .container .create-acc{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-left: 2rem;
 }
 section.main_header  .main-container  .header .container .create-acc .image img{
-   width:3rem;
-   height: 3rem;
-   border-radius: 50%;
+ width:3rem;
+ height: 3rem;
+ border-radius: 50%;
 }
 
 section.main_header .header .container .create-acc .cr{
- margin: 0rem 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    font-size:14px;
+margin: 0rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  font-size:14px;
 }
+
+
+
+
+
+
+
+
+
+  section.main_header .header .container .create-acc .cr p::after{
+  content: '\f0d7';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: .7rem;
+    padding-left: 1rem;
+   }
 section.main_header .header .container .search-bar i{
     font-size: .8rem;
     border-radius: 0px;
@@ -160,6 +180,7 @@ section.nav-container .main-container .container{
     display: flex;
     justify-content: space-between;
    border-bottom: 1px solid #E0E0E0;
+   position: relative;
 }
 section.nav-container .main-container .container .item:first-child{
     width:50%;
@@ -187,9 +208,9 @@ section.nav-container .main-container .container::before {
     content: '';
     background-color: #000;
     position: absolute;
-    width: 11%;
+    width: 8%;
     height: 1px;
-    left: 10%;
+    left: 1%;
     bottom: 0;
 }
 section.nav-container .main-container .container .first-items .bottom a{
@@ -259,6 +280,7 @@ section.nav-container .main-container .container .second-items .join-group{
     font-size: .7rem;
     padding-left: .8rem;  cursor: pointer;
  }
+ 
  section.article-container .top-container{
    width: 80%;
     margin: auto;
@@ -599,6 +621,8 @@ font-weight: 600;
                                        border-radius:14px;
                                        background-color: #EDEEF0;
                                      position: absolute;
+                                     cursor: pointer;
+                                     transition: .3s ease;
                                      right: 0%;
                                            }
                                            section.article-container .top-container .container .container-two .container .item:nth-child(3) .seemore {
@@ -613,14 +637,16 @@ font-weight: 600;
                                            }
                                            section.top-form-container .sign-upForm{
                                              display: none;
-                                                  width:700px;
                                                   padding: 2rem;
                                                   margin: auto;
                                                   position: fixed; /* Stay in place */
                                                   z-index: 22; /* Sit on top */
-                                                  left: 25%;
+                                                  left: 0%;
+                                                  right:0%;
                                                   top: 13%;
-                                                  overflow: auto; /* Enable scroll if needed */
+                                                  width: 80%;
+                                                  
+                                            overflow: hidden;
                                                   background-color: rgb(255, 255, 255); /* Fallback color */
                                                   /* background-color: rgba(0,0,0,0.4); */
                                            }
@@ -651,17 +677,15 @@ font-weight: 600;
                                            }
 
                                            section.top-form-container .createForm{
-                                             display: none;
-                                                  width:700px;
-                                                  padding: 2rem;
-                                                  margin: auto;
-                                                  position: fixed; /* Stay in place */
-                                                  z-index: 22; /* Sit on top */
-                                                  left: 25%;
-                                                  top: 13%;
-                                                  overflow: auto; /* Enable scroll if needed */
-                                                  background-color: rgb(255, 255, 255); /* Fallback color */
-                                                  /* background-color: rgba(0,0,0,0.4); */
+                                            width: 80%;
+                                            padding: 1rem;
+                                            margin: auto;
+                                            position: fixed;
+                                            z-index: 22;
+                                            left: 0%;
+                                            right: 0%;
+                                            overflow: hidden;
+                                          
                                            }
                                            section.top-form-container .forcreate{
                                              display: block;
@@ -670,6 +694,7 @@ font-weight: 600;
                                              display: none;
                                            }
                                            .topCross{
+                                            z-index: 3;
                                                 top: 0%;
                                                 right: 0;
                                                 font-size: 1.5rem;
@@ -694,7 +719,6 @@ font-weight: 600;
                                       }
                                       section.top-form-container .main-container .row{
                                       margin-top: 1.6rem;
-                                      width: 300px;
                                        }
                                        
                                        section.top-form-container .main-container .row:first-child{
@@ -794,6 +818,7 @@ font-weight: 600;
                                                       text-align: center;
                                                       border-radius: 2px;
                                                       border: 1px solid #D9D9DB;
+                                                      margin-bottom: 1rem;
                                                               }
                                                      section.top-form-container .main-container .row.ggl p:first-child:before{
                                                       content: '\f1a0';
@@ -1021,7 +1046,7 @@ font-weight: 600;
                                                                 display: flex;
                                                                 flex-direction: column;
                                                                 position: absolute;
-                                                                right: 10%;
+                                                                right: 0%;
                                                                 top: 100%;
                                                                 width: 8.6rem;
                                                                 background-color: #ffffff;
@@ -1090,6 +1115,14 @@ font-weight: 600;
                                                               }
                                                           }
                                                           @media (max-width:650px) {
+                                                            section.top-form-container .main-container .row:nth-child(3) input[type="text"], input[type="mail"] {
+                                                              
+                                                              font-size: 13px;
+                                                            }
+                                                            section.top-form-container .main-container .row:nth-child(3) {
+                                                              margin-top: 1.5rem;
+                                                              width: 100%;
+                                                            }
                                                             section.main_header .header {
                                                               display: none;
                                                             }
@@ -1099,8 +1132,39 @@ font-weight: 600;
                                                             section.article-container .top-container .container .container-one {
                                                               width: 100%
                                                             }
+                                                            section.nav-container .main-container .container{
+                                                              position: static;
+                                                           }
+                                                           section.top-form-container .sign-upForm {
+                                                            width: 90%;
+                                                            padding: 1rem;
+                                                            margin: auto;
+                                                            position: fixed;
+                                                            z-index: 22;
+                                                            left: 0%;
+                                                           right: 0%;
+                                                          }
+                                                          section.top-form-container .main-container .row:nth-child(2) {
+                                                           
+                                                            flex-direction: column;
+                                                          }
+                                                          section.top-form-container .main-container .row:nth-child(2) h2 {
+                                                            font-size: 1.2rem;
+                                                          }
+                                                          section.top-form-container .main-container .row p {
+                                                            color: #008A45;
+                                                            font-weight: 600;
+                                                            font-size: 10px;
+                                                            line-height: 16px;
+                                                            width: 100%;
+                                                            text-align: center;
+                                                          }
                                                           }
                                                           @media (max-width:350px) {
+                                                            section.top-form-container .main-container .row:nth-child(3) input[type="text"], input[type="mail"] {
+                                                              
+                                                              font-size: 10px;
+                                                            }
                                                           section.article-container .top-container {
                                                             width: 90%;
                                                             margin: auto;
@@ -1133,6 +1197,11 @@ font-weight: 600;
                                                           section.nav-container .main-container .container .item:last-child .headingone p {
                                                             width: 15%;
                                                             font-size: .7rem;
+                                                          }
+                                                          section.top-form-container .sign-upForm {
+                                                            width: 90%;
+                                                            padding: 0.5rem;
+                                                
                                                           }
                                                         }
 
